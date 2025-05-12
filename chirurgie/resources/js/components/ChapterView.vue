@@ -20,7 +20,7 @@
       <div class="gauge">
         <h3>Confiance en soi</h3>
         <div class="gauge-bar">
-          <div class="gauge-fill" :style="{ width: chapter.self_confidence + '%', backgroundColor: getGaugeColor(chapter.self_confidence) }"></div>
+          <div class="gauge-fill" :style="{ width: chapter.self_confidence + '%', backgroundColor: getConfidenceColor(chapter.self_confidence) }"></div>
         </div>
         <span>{{ chapter.self_confidence }}%</span>
       </div>
@@ -56,10 +56,7 @@ async function fetchChapter(id) {
   chapter.value = await response.json();
 }
 
-// On modifie cette fonction pour enregistrer le choix côté backend
 async function selectChoice(choice) {
-
-  // Assuming you have a way to get the CSRF token, for example, from a meta tag:
   const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
   await fetch('/api/select-choice', {
@@ -67,7 +64,7 @@ async function selectChoice(choice) {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'X-CSRF-TOKEN': csrfToken // Include the CSRF token in the headers
+      'X-CSRF-TOKEN': csrfToken
     },
     body: JSON.stringify({
       self_confidence_impact: choice.self_confidence_impact,
@@ -77,18 +74,15 @@ async function selectChoice(choice) {
   fetchChapter(choice.next_chapter_id);
 }
 
-// On modifie cette fonction pour réinitialiser l'historique côté backend
 async function restart() {
-// Assuming you have a way to get the CSRF token, for example, from a meta tag:
-const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
-
+  const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
   await fetch('/api/select-choice', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'X-CSRF-TOKEN': csrfToken // Include the CSRF token in the headers
+      'X-CSRF-TOKEN': csrfToken
     },
     body: JSON.stringify({
       reset: true
@@ -97,10 +91,18 @@ const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute
   emit('restart');
 }
 
+// Pour le risque médical (vert quand bas, rouge quand haut)
 function getGaugeColor(value) {
   if (value <= 33) return '#4CAF50';
   if (value <= 66) return '#FFC107';
   return '#F44336';
+}
+
+// Pour la confiance en soi (rouge quand bas, vert quand haut)
+function getConfidenceColor(value) {
+  if (value <= 33) return '#F44336';
+  if (value <= 66) return '#FFC107';
+  return '#4CAF50';
 }
 
 onMounted(() => {

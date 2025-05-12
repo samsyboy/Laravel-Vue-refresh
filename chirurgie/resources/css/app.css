@@ -1,11 +1,163 @@
-@import 'tailwindcss';
+body, html {
+    height: 100%;
+  }
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-}
+.main-container {
+    margin-top: 150px;      /* Ajuste la valeur selon ton goût (ex: 60px, 80px, 100px) */
+    margin-bottom: 0px;   /* Pour éviter d’être collé en bas sur petits écrans */
+  }
+
+body {
+    font-family: 'Montserrat', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: #7c7b7b;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 16px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  .finalite {
+    margin: 0 auto;
+    max-width: 950px;   /* Ajuste selon ton goût */
+    text-align: center;
+  }
+  
+  .gauges {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 10000px;
+    width: 100%;
+    margin: 40px auto 0 auto; /* Centre horizontalement */
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  
+  .gauge {
+    flex: 1 1 0;
+    min-width: 220px;
+    max-width: 320px;
+    text-align: center;
+  }
+  
+  .gauge-bar {
+    width: 100%;
+    height: 28px;
+    background: #e3eaf1;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .gauge-fill {
+    height: 100%;
+    transition: width 0.3s;
+    border-radius: 14px;
+  }
+  
+  .gauge span {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  li {
+    margin: 12px 0;
+  }
+  
+
+  /* reset css button */
+  button {
+    /* Reset CSS pour les boutons */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    outline: none;
+    text-align: inherit;
+    text-transform: none;
+    border-radius: 0;
+    transition: none;
+  }
+
+  button {
+    background:#4EA6AD;
+    color: #fff;
+    border-radius: 8px;
+    padding: 16px 36px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin: 12px 0;
+    font-family: 'Montserrat', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  
+  button:hover {
+    background: #fff;
+    color: #4EA6AD;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 1.18rem;
+    margin: 18px 0;
+  }
+  
+  .finalite {
+    margin: 0 auto;
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  .finalite .intro {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
+  
+  .finalite .prevention {
+    font-size: 1.1rem;
+    color: #000000;
+    margin-top: 32px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+
+  

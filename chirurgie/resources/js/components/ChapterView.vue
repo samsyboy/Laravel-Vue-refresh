@@ -1,7 +1,8 @@
 <template>
+  <div class="main-container">
   <div v-if="chapter">
     <h2>{{ chapter.title }}</h2>
-    <p>{{ chapter.content }}</p>
+    <p class="content">{{ chapter.content }}</p>
 
     <ul v-if="chapter.choices && chapter.choices.length">
       <li v-for="choice in chapter.choices" :key="choice.id">
@@ -11,7 +12,7 @@
       </li>
     </ul>
     <div v-else>
-      <p>Fin du parcours.</p>
+      <p>Fin de l'aventure.</p>
       <button @click="restart">Recommencer</button>
     </div>
 
@@ -36,6 +37,7 @@
   <div v-else>
     <p>Chargement...</p>
   </div>
+</div>
 </template>
 
 <script setup>
@@ -140,4 +142,10 @@ onMounted(() => {
   margin-top: 5px;
   font-weight: bold;
 }
+.content {
+  max-width: 40rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
 </style>

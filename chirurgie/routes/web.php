@@ -6,13 +6,13 @@ use App\Http\Controllers\Api\StoryController;
 use App\Http\Controllers\Api\ChapterController;
 use App\Http\Controllers\Api\ChoiceController;
 
-// 🌐 Route d'accueil
+// Route d'accueil
 Route::get('/', function () {
     // Quand on va sur la racine du site ("/"), on affiche la vue "home"
     return view('home');
 });
 
-// 📦 Groupe de routes API
+// Groupe de routes API
 Route::prefix('/api')->group(function () {
     // Toutes les routes définies ici commenceront par "/api"
 

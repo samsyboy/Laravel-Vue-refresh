@@ -1,0 +1,446 @@
+> npx concurrently -c "#93c5fd,#c4b5fd,#fb7185,#fdba74" "php artisan serve" "php artisan queue:listen --tries=1" "php artisan pail --timeout=0" "npm run dev" --names=server,queue,logs,vite
+[vite] 
+[vite] > dev
+[vite] > vite
+[vite] 
+[queue] 
+[queue]    INFO  Processing jobs from the [default] queue.  
+[queue] 
+[logs] 
+[logs]    INFO  Tailing application logs.                        Press Ctrl+C to exit  
+[logs]                                                Use -v|-vv to show more details  
+[vite] 
+[vite]   VITE v6.3.3  ready in 268 ms
+[vite] 
+[vite]   ➜  Local:   http://localhost:5173/
+[vite]   ➜  Network: use --host to expose
+[vite] 
+[vite]   LARAVEL v12.10.2  plugin v1.2.0
+[vite] 
+[vite]   ➜  APP_URL: http://localhost
+[server] 
+[server]    INFO  Server running on [http://127.0.0.1:8000].  
+[server] 
+[server]   Press Ctrl+C to stop the server
+[server] 
+[server]   2025-05-11 21:26:58 / ............................................ ~ 0.17ms
+[server]   2025-05-11 21:26:58 /favicon.ico ................................. ~ 0.05ms
+[server]   2025-05-11 21:27:01 / ............................................ ~ 0.93ms
+[server]   2025-05-11 21:27:01 /favicon.ico ..................................... ~ 1s
+[server]   2025-05-11 21:27:03 /api/chapters/1 .............................. ~ 0.23ms
+[server]   2025-05-11 21:27:04 /api/chapters/2 .............................. ~ 0.05ms
+[server]   2025-05-11 21:27:04 /api/chapters/3 .............................. ~ 0.01ms
+[server]   2025-05-11 21:27:04 /api/chapters/4 .............................. ~ 0.11ms
+[server]   2025-05-11 21:27:04 /api/chapters/5 .............................. ~ 0.04ms
+[server]   2025-05-11 21:27:05 /api/chapters/6 .............................. ~ 0.11ms
+[server]   2025-05-11 21:27:05 /api/chapters/7 ............................ ~ 505.65ms
+[server]   2025-05-11 21:27:05 /api/chapters/8 .............................. ~ 0.16ms
+[server]   2025-05-11 21:34:49 / ............................................ ~ 0.72ms
+[server]   2025-05-11 21:34:49 /favicon.ico ................................. ~ 0.06ms
+[server]   2025-05-11 21:34:49 /api/chapters/1 .............................. ~ 0.22ms
+[server]   2025-05-11 21:35:52 / ............................................ ~ 2.02ms
+[server]   2025-05-11 21:35:52 /favicon.ico ................................. ~ 3.59ms
+[server]   2025-05-11 21:36:33 / ............................................ ~ 1.80ms
+[server]   2025-05-11 21:36:33 /favicon.ico ................................. ~ 2.49ms
+[server]   2025-05-11 21:36:33 /api/chapters/1 .............................. ~ 0.14ms
+[server]   2025-05-11 21:40:27 / ............................................ ~ 0.55ms
+[server]   2025-05-11 21:40:27 /favicon.ico ................................. ~ 1.09ms
+[server]   2025-05-11 21:40:29 /api/chapters/1 .............................. ~ 0.20ms
+[server]   2025-05-11 21:41:08 / ............................................ ~ 0.96ms
+[server]   2025-05-11 21:41:08 /favicon.ico ................................. ~ 2.03ms
+[server]   2025-05-11 21:41:37 / ............................................ ~ 0.78ms
+[server]   2025-05-11 21:41:37 /favicon.ico ................................. ~ 2.30ms
+[server]   2025-05-11 21:41:37 /api/chapters/1 .............................. ~ 0.09ms
+[server]   2025-05-11 21:41:38 /api/chapters/2 .............................. ~ 0.28ms
+[server]   2025-05-11 21:41:39 /api/chapters/3 .............................. ~ 0.15ms
+[server]   2025-05-11 21:41:39 /api/chapters/4 .............................. ~ 0.05ms
+[server]   2025-05-11 21:41:39 /api/chapters/5 .............................. ~ 0.05ms
+[server]   2025-05-11 21:41:39 /api/chapters/6 .............................. ~ 0.05ms
+[server]   2025-05-11 21:41:39 /api/chapters/7 .............................. ~ 0.02ms
+[server]   2025-05-11 21:41:40 /api/chapters/8 .............................. ~ 0.12ms
+[server]   2025-05-11 21:45:10 / ............................................ ~ 0.54ms
+[server]   2025-05-11 21:45:10 /favicon.ico ................................. ~ 0.02ms
+[server]   2025-05-11 21:48:38 / ............................................ ~ 1.40ms
+[server]   2025-05-11 21:48:38 /favicon.ico ................................. ~ 0.06ms
+[server]   2025-05-11 21:48:38 /api/chapters/1 .............................. ~ 0.14ms
+[server]   2025-05-11 21:48:39 /api/chapters/2 .............................. ~ 0.14ms
+[server]   2025-05-11 21:48:39 /api/chapters/3 .............................. ~ 0.05ms
+[server]   2025-05-11 21:48:40 /api/chapters/4 .............................. ~ 0.04ms
+[server]   2025-05-11 21:48:40 /api/chapters/5 .............................. ~ 0.26ms
+[server]   2025-05-11 21:48:40 /api/chapters/6 .............................. ~ 0.12ms
+[server]   2025-05-11 21:48:40 /api/chapters/7 .............................. ~ 0.08ms
+[server]   2025-05-11 21:48:40 /api/chapters/8 .............................. ~ 0.06ms
+^C[logs] 
+[server] php artisan serve exited with code 0
+[queue] php artisan queue:listen --tries=1 exited with code SIGINT
+[vite] npm run dev exited with code 0
+[logs] php artisan pail --timeout=0 exited with code 0
+samuelteixeira@macbook-air-de-samuel-2 chirurgie % composer run dev
+> Composer\Config::disableProcessTimeout
+> npx concurrently -c "#93c5fd,#c4b5fd,#fb7185,#fdba74" "php artisan serve" "php artisan queue:listen --tries=1" "php artisan pail --timeout=0" "npm run dev" --names=server,queue,logs,vite
+[vite] 
+[vite] > dev
+[vite] > vite
+[vite] 
+[queue] 
+[queue]    INFO  Processing jobs from the [default] queue.  
+[queue] 
+[logs] 
+[logs]    INFO  Tailing application logs.                        Press Ctrl+C to exit  
+[logs]                                                Use -v|-vv to show more details  
+[vite] 
+[vite]   VITE v6.3.3  ready in 243 ms
+[vite] 
+[vite]   ➜  Local:   http://localhost:5173/
+[vite]   ➜  Network: use --host to expose
+[vite] 
+[vite]   LARAVEL v12.10.2  plugin v1.2.0
+[vite] 
+[vite]   ➜  APP_URL: http://localhost
+[server] 
+[server]    INFO  Server running on [http://127.0.0.1:8000].  
+[server] 
+[server]   Press Ctrl+C to stop the server
+[server] 
+[server]   2025-05-11 21:49:27 / ............................................ ~ 0.13ms
+[server]   2025-05-11 21:49:27 /favicon.ico ................................. ~ 0.04ms
+[server]   2025-05-11 21:49:32 / ............................................ ~ 0.50ms
+[server]   2025-05-11 21:49:32 /favicon.ico ............................... ~ 505.25ms
+[server]   2025-05-11 21:49:35 /api/chapters/1 .............................. ~ 0.58ms
+[server]   2025-05-11 21:49:36 /api/chapters/2 .............................. ~ 0.15ms
+[server]   2025-05-11 21:49:36 /api/chapters/3 .............................. ~ 0.05ms
+[server]   2025-05-11 21:49:37 /api/chapters/4 .............................. ~ 0.06ms
+[server]   2025-05-11 21:49:37 /api/chapters/5 .............................. ~ 0.28ms
+[server]   2025-05-11 21:49:37 /api/chapters/6 .............................. ~ 0.06ms
+[server]   2025-05-11 21:49:37 /api/chapters/7 .............................. ~ 0.06ms
+[server]   2025-05-11 21:49:37 /api/chapters/8 .............................. ~ 0.22ms
+[server]   2025-05-11 21:49:39 /api/chapters/1 .............................. ~ 0.35ms
+[server]   2025-05-11 21:49:40 /api/chapters/9 .............................. ~ 0.10ms
+[server]   2025-05-11 21:49:40 /api/chapters/10 ............................. ~ 0.04ms
+[server]   2025-05-11 21:49:40 /api/chapters/11 ............................. ~ 0.21ms
+[server]   2025-05-11 21:49:41 /api/chapters/12 ............................. ~ 0.14ms
+[server]   2025-05-11 21:49:41 /api/chapters/13 ............................. ~ 0.19ms
+[server]   2025-05-11 21:49:41 /api/chapters/14 ............................. ~ 0.10ms
+[server]   2025-05-11 21:49:41 /api/chapters/17 ............................. ~ 0.06ms
+[server]   2025-05-11 22:09:32 / ............................................ ~ 3.26ms
+[server]   2025-05-11 22:09:32 /favicon.ico ................................. ~ 0.02ms
+[server]   2025-05-11 22:09:33 /api/chapters/1 .............................. ~ 0.09ms
+[server]   2025-05-11 22:09:33 /api/chapters/2 .............................. ~ 0.06ms
+[server]   2025-05-11 22:09:34 /api/chapters/3 .............................. ~ 0.02ms
+[server]   2025-05-11 22:09:34 /api/chapters/4 .............................. ~ 0.02ms
+[server]   2025-05-11 22:09:34 /api/chapters/5 .............................. ~ 0.05ms
+[server]   2025-05-11 22:09:34 /api/chapters/6 .............................. ~ 0.04ms
+[server]   2025-05-11 22:09:34 /api/chapters/7 .............................. ~ 0.01ms
+[server]   2025-05-11 22:09:35 /api/chapters/8 .............................. ~ 0.20ms
+[server]   2025-05-11 22:16:34 / ............................................ ~ 0.75ms
+[server]   2025-05-11 22:16:34 /favicon.ico ................................. ~ 1.76ms
+[server]   2025-05-11 22:26:43 / ............................................ ~ 0.95ms
+[server]   2025-05-11 22:26:43 /favicon.ico ................................. ~ 1.98ms
+[vite] 10:29:07 PM [vite] (client) hmr update /resources/js/components/ChapterView.vue
+[server]   2025-05-11 22:29:09 / ............................................ ~ 1.26ms
+[server]   2025-05-11 22:29:09 /favicon.ico ................................. ~ 1.71ms
+[server]   2025-05-11 22:29:10 /api/chapters/1 .............................. ~ 0.14ms
+[server]   2025-05-11 22:29:14 /api/chapters/2 .............................. ~ 0.26ms
+[server]   2025-05-11 22:29:14 /api/chapters/3 .............................. ~ 0.23ms
+[server]   2025-05-11 22:29:15 /api/chapters/4 .............................. ~ 0.11ms
+[server]   2025-05-11 22:29:15 /api/chapters/5 ............................ ~ 505.57ms
+[server]   2025-05-11 22:29:15 /api/chapters/6 .............................. ~ 0.06ms
+[server]   2025-05-11 22:29:16 /api/chapters/7 .............................. ~ 0.27ms
+[server]   2025-05-11 22:29:16 /api/chapters/8 .............................. ~ 0.30ms
+[server]   2025-05-11 22:29:20 /api/chapters/1 .............................. ~ 0.45ms
+[server]   2025-05-11 22:29:21 /api/chapters/2 .............................. ~ 0.16ms
+[server]   2025-05-11 22:29:23 /api/chapters/3 .............................. ~ 0.29ms
+[server]   2025-05-11 22:29:24 /api/chapters/4 .............................. ~ 0.09ms
+[server]   2025-05-11 22:29:26 /api/chapters/5 .............................. ~ 0.32ms
+[server]   2025-05-11 22:29:29 /api/chapters/6 .............................. ~ 0.17ms
+[server]   2025-05-11 22:29:30 /api/chapters/7 .............................. ~ 0.05ms
+[server]   2025-05-11 22:29:34 /api/chapters/8 .............................. ~ 0.09ms
+[server]   2025-05-11 22:29:37 /api/chapters/1 .............................. ~ 0.21ms
+[server]   2025-05-11 22:29:38 /api/chapters/9 .............................. ~ 0.42ms
+[server]   2025-05-11 22:29:39 /api/chapters/10 ............................. ~ 0.15ms
+[server]   2025-05-11 22:29:40 /api/chapters/11 ............................. ~ 0.05ms
+[server]   2025-05-11 22:29:40 /api/chapters/12 ............................. ~ 0.22ms
+[server]   2025-05-11 22:29:40 /api/chapters/13 ............................. ~ 0.21ms
+[server]   2025-05-11 22:29:41 /api/chapters/14 ............................. ~ 0.06ms
+[server]   2025-05-11 22:29:41 /api/chapters/15 ............................. ~ 0.25ms
+[server]   2025-05-11 22:29:44 /api/chapters/1 .............................. ~ 0.16ms
+[server]   2025-05-11 22:29:44 /api/chapters/2 .............................. ~ 0.14ms
+[server]   2025-05-11 22:29:45 /api/chapters/3 .............................. ~ 0.05ms
+[server]   2025-05-11 22:29:45 /api/chapters/4 .............................. ~ 0.22ms
+[server]   2025-05-11 22:29:45 /api/chapters/5 .............................. ~ 0.08ms
+[server]   2025-05-11 22:29:45 /api/chapters/6 .............................. ~ 0.39ms
+[server]   2025-05-11 22:29:46 /api/chapters/7 .............................. ~ 0.32ms
+[server]   2025-05-11 22:29:51 /api/chapters/8 .............................. ~ 0.29ms
+[server]   2025-05-11 22:29:56 /api/chapters/1 .............................. ~ 0.06ms
+[server]   2025-05-11 22:29:57 /api/chapters/9 .............................. ~ 0.19ms
+[server]   2025-05-11 22:29:58 /api/chapters/10 ............................. ~ 0.52ms
+[server]   2025-05-11 22:30:06 /api/chapters/11 ............................. ~ 0.16ms
+[server]   2025-05-11 22:30:46 / ............................................ ~ 5.21ms
+[server]   2025-05-11 22:30:46 /favicon.ico ............................... ~ 511.86ms
+[server]   2025-05-11 22:30:47 /api/chapters/1 .............................. ~ 0.11ms
+[server]   2025-05-11 22:30:48 /api/chapters/2 .............................. ~ 0.23ms
+[server]   2025-05-11 22:30:51 /api/chapters/3 .............................. ~ 0.09ms
+[server]   2025-05-11 22:30:59 / ............................................ ~ 0.45ms
+[server]   2025-05-11 22:30:59 /favicon.ico ................................. ~ 1.04ms
+[server]   2025-05-11 22:31:00 /api/chapters/1 .............................. ~ 0.15ms
+[server]   2025-05-11 22:31:03 /api/chapters/2 .............................. ~ 0.69ms
+[server]   2025-05-11 22:31:09 /api/chapters/3 .............................. ~ 0.33ms
+[server]   2025-05-11 22:31:19 /api/chapters/4 .............................. ~ 0.58ms
+[server]   2025-05-11 22:33:16 / ............................................ ~ 3.99ms
+[server]   2025-05-11 22:33:16 /favicon.ico ................................. ~ 4.75ms
+[server]   2025-05-11 22:33:17 /api/chapters/1 .............................. ~ 0.12ms
+[server]   2025-05-11 22:33:18 /api/chapters/2 .............................. ~ 0.13ms
+[server]   2025-05-11 22:33:20 /api/chapters/3 .............................. ~ 0.26ms
+[server]   2025-05-11 22:33:21 /api/chapters/4 .............................. ~ 0.25ms
+[server]   2025-05-11 22:33:23 /api/chapters/5 .............................. ~ 1.18ms
+[server]   2025-05-11 22:33:25 /api/chapters/6 .............................. ~ 0.28ms
+[server]   2025-05-11 22:33:27 /api/chapters/7 .............................. ~ 0.31ms
+[server]   2025-05-11 22:33:27 /api/chapters/8 .............................. ~ 0.05ms
+[server]   2025-05-11 22:33:30 /api/chapters/1 .............................. ~ 0.11ms
+[server]   2025-05-11 22:33:31 /api/chapters/2 .............................. ~ 0.31ms
+[server]   2025-05-11 22:33:33 /api/chapters/3 .............................. ~ 0.28ms
+[server]   2025-05-11 22:33:37 /api/chapters/4 .............................. ~ 0.16ms
+[server]   2025-05-11 22:33:42 /api/chapters/5 .............................. ~ 0.08ms
+[server]   2025-05-11 22:33:47 /api/chapters/6 .............................. ~ 0.88ms
+[server]   2025-05-11 22:33:52 /api/chapters/7 .............................. ~ 0.11ms
+[server]   2025-05-11 22:33:57 /api/chapters/8 .............................. ~ 0.84ms
+[server]   2025-05-11 22:36:46 / ............................................ ~ 0.27ms
+[server]   2025-05-11 22:36:46 /favicon.ico ............................... ~ 503.14ms
+[server]   2025-05-11 22:36:47 /api/chapters/1 .............................. ~ 0.09ms
+[server]   2025-05-11 22:36:49 /api/chapters/2 .............................. ~ 0.15ms
+[server]   2025-05-11 22:36:49 /api/chapters/3 .............................. ~ 0.27ms
+[server]   2025-05-11 22:36:50 /api/chapters/4 .............................. ~ 0.63ms
+[server]   2025-05-11 22:36:50 /api/chapters/5 .............................. ~ 0.05ms
+[server]   2025-05-11 22:36:50 /api/chapters/6 ............................ ~ 505.58ms
+[server]   2025-05-11 22:36:51 /api/chapters/7 .............................. ~ 0.07ms
+[server]   2025-05-11 22:36:51 /api/chapters/8 .............................. ~ 0.29ms
+[server]   2025-05-11 22:36:54 /api/chapters/1 .............................. ~ 0.37ms
+[server]   2025-05-11 22:36:55 /api/chapters/2 .............................. ~ 0.11ms
+[server]   2025-05-11 22:36:55 /api/chapters/3 .............................. ~ 0.04ms
+[server]   2025-05-11 22:36:55 /api/chapters/4 .............................. ~ 0.03ms
+[server]   2025-05-11 22:36:55 /api/chapters/5 .............................. ~ 0.23ms
+[server]   2025-05-11 22:36:55 /api/chapters/6 .............................. ~ 0.08ms
+[server]   2025-05-11 22:36:55 /api/chapters/7 .............................. ~ 0.28ms
+[server]   2025-05-11 22:36:56 /api/chapters/8 .............................. ~ 0.11ms
+[server]   2025-05-11 22:36:58 /api/chapters/1 .............................. ~ 0.19ms
+[server]   2025-05-11 22:36:59 /api/chapters/2 .............................. ~ 0.24ms
+[server]   2025-05-11 22:37:00 /api/chapters/3 .............................. ~ 0.05ms
+[server]   2025-05-11 22:37:00 /api/chapters/4 .............................. ~ 0.01ms
+[server]   2025-05-11 22:37:00 /api/chapters/5 .............................. ~ 0.01ms
+[server]   2025-05-11 22:37:00 /api/chapters/6 .............................. ~ 0.18ms
+[server]   2025-05-11 22:37:00 /api/chapters/7 .............................. ~ 0.05ms
+[server]   2025-05-11 22:37:00 /api/chapters/8 .............................. ~ 0.06ms
+[vite] 10:37:39 PM [vite] (client) hmr update /resources/js/components/ChapterView.vue, /resources/js/components/ChapterView.vue?vue&type=style&index=0&scoped=f3f79e78&lang.css
+[server]   2025-05-11 22:37:39 /api/chapters/1 .............................. ~ 0.72ms
+[server]   2025-05-11 22:37:42 / ............................................ ~ 1.33ms
+[server]   2025-05-11 22:37:42 /favicon.ico ................................. ~ 0.04ms
+[server]   2025-05-11 22:37:43 /api/chapters/1 .............................. ~ 0.16ms
+[server]   2025-05-11 22:37:47 /api/chapters/2 ............................ ~ 500.87ms
+[server]   2025-05-11 22:37:48 /api/chapters/3 .............................. ~ 0.48ms
+[server]   2025-05-11 22:37:49 /api/chapters/4 .............................. ~ 0.07ms
+[server]   2025-05-11 22:37:49 /api/chapters/5 .............................. ~ 0.26ms
+[server]   2025-05-11 22:37:50 /api/chapters/6 .............................. ~ 0.26ms
+[server]   2025-05-11 22:37:50 /api/chapters/7 .............................. ~ 0.17ms
+[server]   2025-05-11 22:37:51 /api/chapters/8 .............................. ~ 0.34ms
+[server]   2025-05-11 22:37:53 /api/chapters/1 .............................. ~ 0.21ms
+[server]   2025-05-11 22:37:54 /api/chapters/2 .............................. ~ 0.10ms
+[server]   2025-05-11 22:37:54 /api/chapters/3 .............................. ~ 0.11ms
+[server]   2025-05-11 22:37:54 /api/chapters/4 .............................. ~ 0.03ms
+[server]   2025-05-11 22:37:54 /api/chapters/5 .............................. ~ 0.25ms
+[server]   2025-05-11 22:37:55 /api/chapters/6 .............................. ~ 0.31ms
+[server]   2025-05-11 22:37:55 /api/chapters/7 .............................. ~ 0.08ms
+[server]   2025-05-11 22:37:55 /api/chapters/8 .............................. ~ 0.08ms
+[server]   2025-05-11 22:37:57 /api/chapters/1 .............................. ~ 0.05ms
+[server]   2025-05-11 22:37:58 /api/chapters/2 .............................. ~ 0.27ms
+[server]   2025-05-11 22:37:59 /api/chapters/3 .............................. ~ 0.16ms
+[server]   2025-05-11 22:38:03 /api/chapters/4 .............................. ~ 3.70ms
+[server]   2025-05-11 22:38:05 /api/chapters/5 .............................. ~ 0.18ms
+[server]   2025-05-11 22:38:06 /api/chapters/6 .............................. ~ 0.18ms
+[server]   2025-05-11 22:38:09 /api/chapters/7 .............................. ~ 0.12ms
+[server]   2025-05-11 22:38:12 /api/chapters/8 .............................. ~ 0.21ms
+^C[logs] 
+[queue] php artisan queue:listen --tries=1 exited with code SIGINT
+[vite] npm run dev exited with code 0
+[server] php artisan serve exited with code SIGINT
+[logs] php artisan pail --timeout=0 exited with code SIGINT
+samuelteixeira@macbook-air-de-samuel-2 chirurgie % composer run dev
+> Composer\Config::disableProcessTimeout
+> npx concurrently -c "#93c5fd,#c4b5fd,#fb7185,#fdba74" "php artisan serve" "php artisan queue:listen --tries=1" "php artisan pail --timeout=0" "npm run dev" --names=server,queue,logs,vite
+[vite] 
+[vite] > dev
+[vite] > vite
+[vite] 
+[queue] 
+[queue]    INFO  Processing jobs from the [default] queue.  
+[queue] 
+[logs] 
+[logs]    INFO  Tailing application logs.                        Press Ctrl+C to exit  
+[logs]                                                Use -v|-vv to show more details  
+[vite] 
+[vite]   VITE v6.3.3  ready in 266 ms
+[vite] 
+[vite]   ➜  Local:   http://localhost:5173/
+[vite]   ➜  Network: use --host to expose
+[vite] 
+[vite]   LARAVEL v12.10.2  plugin v1.2.0
+[vite] 
+[vite]   ➜  APP_URL: http://localhost
+[server] 
+[server]    INFO  Server running on [http://127.0.0.1:8000].  
+[server] 
+[server]   Press Ctrl+C to stop the server
+[server] 
+[server]   2025-05-11 22:44:22 / ............................................ ~ 0.11ms
+[server]   2025-05-11 22:44:22 /favicon.ico ............................... ~ 505.39ms
+[server]   2025-05-11 22:44:27 / ............................................ ~ 1.07ms
+[server]   2025-05-11 22:44:27 /favicon.ico ............................... ~ 504.96ms
+[server]   2025-05-11 22:44:28 /api/chapters/1 .............................. ~ 0.11ms
+[server]   2025-05-11 22:44:30 /api/chapters/2 .............................. ~ 0.31ms
+[server]   2025-05-11 22:44:30 /api/chapters/3 .............................. ~ 0.13ms
+[server]   2025-05-11 22:44:31 /api/chapters/4 .............................. ~ 0.11ms
+[server]   2025-05-11 22:44:31 /api/chapters/5 .............................. ~ 0.26ms
+[server]   2025-05-11 22:44:32 /api/chapters/6 .............................. ~ 0.29ms
+[server]   2025-05-11 22:44:32 /api/chapters/7 .............................. ~ 0.22ms
+[server]   2025-05-11 22:44:33 /api/chapters/8 .............................. ~ 0.26ms
+[server]   2025-05-11 22:44:36 /api/chapters/1 .............................. ~ 0.20ms
+[server]   2025-05-11 22:44:37 /api/chapters/9 .............................. ~ 0.05ms
+[server]   2025-05-11 22:44:38 /api/chapters/10 ............................. ~ 0.19ms
+[server]   2025-05-11 22:44:39 /api/chapters/11 ............................. ~ 0.26ms
+[server]   2025-05-11 22:44:40 /api/chapters/12 ............................. ~ 0.26ms
+[server]   2025-05-11 22:44:40 /api/chapters/13 ............................. ~ 0.08ms
+[server]   2025-05-11 22:44:41 /api/chapters/14 ............................. ~ 0.12ms
+[server]   2025-05-11 22:44:42 /api/chapters/17 ............................. ~ 0.14ms
+^C[logs] 
+[server] php artisan serve exited with code 0
+[queue] php artisan queue:listen --tries=1 exited with code SIGINT
+[vite] npm run dev exited with code 0
+[logs] php artisan pail --timeout=0 exited with code 0
+samuelteixeira@macbook-air-de-samuel-2 chirurgie % php artisan migrate:fresh --seed
+
+  Dropping all tables .............................................................................................. 9.33ms DONE
+
+   INFO  Preparing database.  
+
+  Creating migration table ......................................................................................... 2.47ms DONE
+
+   INFO  Running migrations.  
+
+  0001_01_01_000000_create_users_table ............................................................................. 3.20ms DONE
+  0001_01_01_000001_create_cache_table ............................................................................. 1.11ms DONE
+  0001_01_01_000002_create_jobs_table .............................................................................. 2.53ms DONE
+  2025_05_05_132552_create_stories_table ........................................................................... 0.39ms DONE
+  2025_05_05_132553_create_chapters_table .......................................................................... 6.31ms DONE
+  2025_05_05_132553_create_choices_table ........................................................................... 0.62ms DONE
+
+
+   INFO  Seeding database.  
+
+  Database\Seeders\StorySeeder ......................................................................................... RUNNING  
+  Database\Seeders\StorySeeder ....................................................................................... 4 ms DONE  
+
+  Database\Seeders\ChapterSeeder ....................................................................................... RUNNING  
+  Database\Seeders\ChapterSeeder ..................................................................................... 1 ms DONE  
+
+  Database\Seeders\ChoiceSeeder ........................................................................................ RUNNING  
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[HY000]: General error: 1 table choices has no column named medical_risk_impact (Connection: sqlite, SQL: insert into "choices" ("chapter_id", "medical_risk_impact", "next_chapter_id", "self_confidence_impact", "text") values (1, 0, 2, 0, Je suis un homme), (1, 0, 9, 0, Je suis une femme))
+
+  at vendor/laravel/framework/src/Illuminate/Database/Connection.php:822
+    818▕                     $this->getName(), $query, $this->prepareBindings($bindings), $e
+    819▕                 );
+    820▕             }
+    821▕ 
+  ➜ 822▕             throw new QueryException(
+    823▕                 $this->getName(), $query, $this->prepareBindings($bindings), $e
+    824▕             );
+    825▕         }
+    826▕     }
+
+      +11 vendor frames 
+
+  12  database/seeders/ChoiceSeeder.php:14
+      Illuminate\Database\Eloquent\Model::__callStatic("insert")
+      +8 vendor frames 
+
+  21  database/seeders/DatabaseSeeder.php:23
+      Illuminate\Database\Seeder::call("Database\Seeders\ChoiceSeeder")
+
+samuelteixeira@macbook-air-de-samuel-2 chirurgie % composer run dev                
+> Composer\Config::disableProcessTimeout
+> npx concurrently -c "#93c5fd,#c4b5fd,#fb7185,#fdba74" "php artisan serve" "php artisan queue:listen --tries=1" "php artisan pail --timeout=0" "npm run dev" --names=server,queue,logs,vite
+[vite] 
+[vite] > dev
+[vite] > vite
+[vite] 
+[logs] 
+[logs]    INFO  Tailing application logs.                        Press Ctrl+C to exit  
+[logs]                                                Use -v|-vv to show more details  
+[queue] 
+[queue]    INFO  Processing jobs from the [default] queue.  
+[queue] 
+[vite] 
+[vite]   VITE v6.3.3  ready in 247 ms
+[vite] 
+[vite]   ➜  Local:   http://localhost:5173/
+[vite]   ➜  Network: use --host to expose
+[vite] 
+[vite]   LARAVEL v12.10.2  plugin v1.2.0
+[vite] 
+[vite]   ➜  APP_URL: http://localhost
+[server] 
+[server]    INFO  Server running on [http://127.0.0.1:8000].  
+[server] 
+[server]   Press Ctrl+C to stop the server
+[server] 
+[server]   2025-05-11 22:45:26 / ............................................ ~ 0.10ms
+[server]   2025-05-11 22:45:26 /favicon.ico ............................... ~ 505.92ms
+[server]   2025-05-11 22:45:30 / ............................................ ~ 0.15ms
+[server]   2025-05-11 22:45:30 /favicon.ico ..................................... ~ 1s
+[server]   2025-05-11 22:45:33 /api/chapters/1 .............................. ~ 0.18ms
+[server]   2025-05-11 22:45:38 / ............................................ ~ 0.91ms
+[server]   2025-05-11 22:45:38 /favicon.ico ................................. ~ 2.50ms
+[server]   2025-05-11 22:45:38 / ............................................ ~ 0.06ms
+[server]   2025-05-11 22:45:38 /favicon.ico ................................. ~ 0.15ms
+[server]   2025-05-11 22:45:40 / .......................................... ~ 505.54ms
+[server]   2025-05-11 22:45:40 /favicon.ico ................................. ~ 0.10ms
+[server]   2025-05-11 22:45:40 / ............................................ ~ 0.17ms
+[server]   2025-05-11 22:45:40 /favicon.ico ................................. ~ 0.07ms
+[server]   2025-05-11 22:45:41 /api/chapters/1 .............................. ~ 0.29ms
+[server]   2025-05-11 22:45:46 /api/chapters/1 .............................. ~ 0.38ms
+[server]   2025-05-11 22:45:48 /api/chapters/1 .............................. ~ 0.11ms
+[server]   2025-05-11 22:45:51 / ............................................ ~ 0.50ms
+[server]   2025-05-11 22:45:51 /favicon.ico ................................. ~ 3.04ms
+[server]   2025-05-11 22:45:51 / ............................................ ~ 0.25ms
+[server]   2025-05-11 22:45:51 /favicon.ico ................................. ~ 0.07ms
+[server]   2025-05-11 22:45:52 /api/chapters/1 .............................. ~ 0.14ms
+^C[logs] 
+[queue] php artisan queue:listen --tries=1 exited with code SIGINT
+[vite] npm run dev exited with code 0
+[server] php artisan serve exited with code 0
+[logs] php artisan pail --timeout=0 exited with code 0
+samuelteixeira@macbook-air-de-samuel-2 chirurgie % git log
+
+commit 56be9f8fbc5b5e03adbcf75fac6fb16d78b95a6f (HEAD -> main)
+Author: samsyboy <samuel.teixeira1@hes-so.ch>
+Date:   Sun May 11 21:49:14 2025 +0200
+
+    ajout commentaires explicatifs pour les fichiers seeders
+
+commit 87d171e7bfd962b90cd234352f60715f55a63485
+Author: samsyboy <samuel.teixeira1@hes-so.ch>
+Date:   Sun May 11 21:42:22 2025 +0200
+
+    ajout de commentaires explicatifs dans tous les fichiers models
+
+commit e05f378e1c1ebe82b61866514ea2b7b50ba09029
+Author: samsyboy <samuel.teixeira1@hes-so.ch>
+Date:   Sun May 11 21:37:22 2025 +0200
+
+    ajout de commentaires explicatifs dans tous les fichiers requests
+
+commit 30f5d8bde67fbc21b58220f372700e25c38fdb79
+Author: samsyboy <samuel.teixeira1@hes-so.ch>
+Date:   Sun May 11 21:20:59 2025 +0200
+
